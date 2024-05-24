@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electricity Bill Calculator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Electricity Bill Calculator</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Units Range</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            {% if units <= 50 %} 
+              0 - {{ units }} units
+            {% elif units <= 150 %}
+              0 - 50 units<br>
+              51 - {{ units }} units
+            {% elif units <= 250 %}
+              0 - 50 units<br>
+              51 - 150 units<br>
+              151 - {{ units }} units
+            {% else %}
+              0 - 50 units<br>
+              51 - 150 units<br>
+              151 - 250 units<br>
+              251 - {{ units }} units
+            {% endif %}
+          </td>
+          <td>
+            {% if units <= 50 %}
+              Rs. {{ units|floatformat:2|default:0 }}
+            {% elif units <= 150 %}
+              Rs. {{ 50 * 3.5 | floatformat:2 }} + Rs. {{ ((units - 50) * 4)|floatformat:2 }}
+            {% elif units <= 250 %}
+              Rs. {{ (50 * 3.5)|floatformat:2 }} + Rs. {{ (100 * 4)|floatformat:2 }} + Rs. {{ ((units - 150) * 5.2)|floatformat:2 }}
+            {% else %}
+              Rs. {{ (50 * 3.5)|floatformat:2 }} + Rs. {{ (100 * 4)|floatformat:2 }} + Rs. {{ (100 * 5.2)|floatformat:2 }} + Rs. {{ ((units - 250) * 6.5)|floatformat:2 }}
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <th>Total Bill</th>
+          <th>Rs. {{ total|floatformat:2 }}</th>
+        </tr>
+      </tbody>
+    </table>
+    <a href="{% url 'calculate_bill' %}" class="btn btn-primary">Calculate Again</a>
+  </div>
+</body>
+</html>

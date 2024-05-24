@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #EDFFE1;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title text-center">Electricity Bill Calculator</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Units</th>
+                                    <th>Rate</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if units <= 50 %}
+                                    <tr>
+                                        <td>1-50</td>
+                                        <td>Rs. 3.50</td>
+                                        <td>{{ units|floatformat:2 }}</td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <td>1-50</td>
+                                        <td>Rs. 3.50</td>
+                                        <td>175.00</td>
+                                    </tr>
+                                    {% with remaining=units|add:"-50" %}
+                                        {% if remaining <= 100 %}
+                                            <tr>
+                                                <td>51-150</td>
+                                                <td>{Rs. 4.00}</td>
+                                                <td>{ remaining * 4.00|floatformat:2 }</td>
+                                            </tr>
+                                        {% else %}
+                                            <tr>
+                                                <td>51-150</td>
+                                                <td>Rs. 4.00</td>
+                                                <td>400.00</td>
+                                            </tr>
+                                            {% with remaining=remaining|add:"-100" %}
+                                                {% if remaining <= 100 %}
+                                                    <tr>
+                                                        <td>151-250</td>
+                                                        <td>Rs. 5.20</td>
+                                                        <td>{ remaining * 5.20|floatformat:2 }</td>
+                                                    </tr>
+                                                {% else %}
+                                                    <tr>
+                                                        <td>151-250</td>
+                                                        <td>Rs. 5.20</td>
+                                                        <td>520.00</td>
+                                                    </tr>
+                                                {% if remaining_units %}
+                                                    <tr>
+                                                        <td>{{remaining_units}}</td>
+                                                        <td>Rs. 6.50</td>
+                                                        <td>{% widthratio remaining_units 1 6.50 %}</td>
+                                                    </tr>
+                                                {% endif %}
+                                                {% endif %}
+                                            {% endwith %}
+                                        {% endif %}
+                                    {% endwith %}
+                                {% endif %}
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2" class="text-right">Total</td>
+                                    <td>Rs. <b>{{ bill|floatformat:2 }}</b></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electricity Bill Calculator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Electricity Bill Calculator</h1>
+    <form method="post" action="{% url 'calculate_bill' %}">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="units">Enter the number of units consumed:</label>
+        <input type="number" class="form-control" id="units" name="units" placeholder="Enter units" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Calculate</button>
+    </form>
+  </div>
+</body>
+</html>

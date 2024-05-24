@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddhi | Projects</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container" style="background: url(bg.jpg) no-repeat center; background-size: cover; height: 100vh;" >
+          
+            <div class="row">
+              <div class="col-md-7">
+                <h1 class="text-center text-white" style="color: white;" >SEMESTER PROJECTS AND WORK</h1>
+              </div>
+              <div class="col-md-5 text-right">
+                <button type="button"  class="btn btn-secondary" style="margin-top: 20px;"  id="student-name">View Student Details</button>
+              </div>
+            </div>
+            <div class="modal fade" id="studentDetailsModal" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title">Student Details</h2>
+                  </div>
+                  <div class="modal-body">
+                    <p>Name: Riddhi Sonawane</p>
+                    <p>PRN: 12220238</p>
+                    <p>Department: Computer Engineering</p> 
+                    <p>Div: TY-CS-D</p> 
+                    <p>Roll no.: 41</p> 
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script>
+              // Show modal on name click
+              $('#student-name').click(function(){
+                $('#studentDetailsModal').modal('show'); 
+              });
+              </script>            
+            <br>
+            <ul class="nav nav-pills nav-justified">
+              <li class="active"><a href="#edi" data-toggle="pill" ></a> </li>
+            </ul>
+            <ul class="nav nav-pills nav-justified" >
+                <li class="active"><a data-toggle="pill" href="#edi" style="color: #ffffff;">EDI</a></li>
+                <li><a data-toggle="pill" href="#dt" style="color: #ffffff;">DT</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="" style="color: #ffffff;">CP
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a data-toggle="pill" href="#sem3">Semester 3</a></li>
+                    <li><a data-toggle="pill" href="#sem4">Semester 4</a></li>
+                    <li><a data-toggle="pill" href="#sem5">Semester 5</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div id="edi" class="tab-pane fade in active">
+                    
+                  <h3 class="text-center" style="color: #ffffff;">
+                    <i class="glyphicon glyphicon-chevron-left"></i>
+                    Engineering Design and Innovation
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                  </h3>
+                 
+                  <div class="row" style="margin-top: 30px;">
+                    <div class="col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="https://i.ytimg.com/vi/8kLT8BMpcuA/sddefault.jpg" class="card-img" alt="..." width="135px" height="135px">
+                                  </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title"><strong> Bitlearn</strong> </h5>
+                                  <p class="card-text">The TF-IDF vectorization-based audio and video lecture summarizer for students and teachers. The project provides multilogin functionality as well as other storage features.</p>
+                                  <p class="card-text"><small class="text-muted"><a href="https://github.com/riddhiss19/BitLearn" class="text-muted">View Project <i class="glyphicon glyphicon-chevron-right"></i>  </a></small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>       
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px  #1f1f1f;background-color: #ffffff">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="https://i.ytimg.com/vi/8kLT8BMpcuA/sddefault.jpg" class="card-img" alt="..." width="135px" height="135px">
+                                  </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title"><strong> Alcohol impaired driver alert system</strong></h5>
+                                  <p class="card-text">An integrated road safety IOT system that detects driver intoxication levels via  sensors, tracks location via GPS, alerts authorities and nearby drivers of hazards.</p>
+                                  <p class="card-text"><small class="text-muted"><a href="" class="text-muted"> IOT hardware system <i class="glyphicon glyphicon-chevron-right"></i>  </a></small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>       
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="https://i.ytimg.com/vi/8kLT8BMpcuA/sddefault.jpg" class="card-img" alt="..." width="135px" height="135px">
+                                  </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title"><strong> NeoCode</strong> </h5>
+                                  <p class="card-text">Neocode is BERT based transpiler that converts source code from Javascript to python. The project provides other features such as readabilty indexing and auto comment generaation. </p>
+                                  <p class="card-text"><small class="text-muted"><a href="" class="text-muted">View Project <i class="glyphicon glyphicon-chevron-right"></i>  </a></small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>        
+                    </div>
+                  </div>
+                </div>
+                <br>
+                
+                <div id="dt" class="tab-pane fade">
+                  <h3 class="text-center" style="color: white;">
+                    <i class="glyphicon glyphicon-chevron-left"></i>
+                    Publication
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                  </h3>
+                 
+                  <div class="row" style="margin-top: 30px;">
+                    <div class="col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="https://aventislearning.com/wp-content/uploads/2020/10/What-is-Design-Thinking-1.png" class="card-img" alt="..." width="135px" height="135px">
+                                  </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title"><strong> Towards Safer Roads: Development and Evaluation of an Alcohol-Impaired Driver Alert System</strong> </h5>
+                                  <p class="card-text">Publisher:<b> IEEE</b></p>
+                                  <p class="card-text"><small class="text-muted"><a href="https://doi.org/10.1109/ICSCNA58489.2023.10370440" class="text-muted">View Paper <i class="glyphicon glyphicon-chevron-right"></i>  </a></small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>       
+                    </div>
+                 </div>
+                </div>
+                <div id="sem3" class="tab-pane fade in ">
+                  <h3 class="text-center" style="color: white;">
+                    <i class="glyphicon glyphicon-chevron-left"></i>
+                    Semester 3 Course Projects
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                  </h3>
+                 
+                  <div class="row" style="margin-top: 30px;">
+                    <div class="col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="https://play-lh.googleusercontent.com/zWG2W36XfJmN4A7WeWnisXItr4r8FJRVsZjpP7HgnhLrl1hEiD5-L5WQ6g3ecnZuFk0P" class="card-img" alt="..." width="135px" height="135px">
+                                  </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title"><strong> Quiz Game in Assembly language</strong> </h5>
+                                  <p class="card-text">An interactive multiple choice quiz game programmed in Assembly language where players answer trivia questions by selecting the correct choice to score points </p>
+                                  <p class="card-text"><small class="text-muted"><a href="#" class="text-muted">ASM Project <i class="glyphicon glyphicon-chevron-right"></i>  </a></small> <b style="margin-left: 20px;">Course: Computer Org. & Arch. </b></p>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>       
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                          <div class="row no-gutters">
+                              <div class="col-md-4">
+                                  <img src="https://play-lh.googleusercontent.com/zWG2W36XfJmN4A7WeWnisXItr4r8FJRVsZjpP7HgnhLrl1hEiD5-L5WQ6g3ecnZuFk0P" class="card-img" alt="..." width="135px" height="135px">
+                                </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <h5 class="card-title"><strong> Data Structures library in C</strong> </h5>
+                                <p class="card-text">A C library implementing basic operations like for common data structures like stacks, queues, linked lists, trees, and graphs to provide reusable implementations for software projects. </p>
+                                <p class="card-text"><small class="text-muted"><a href="https://github.com/riddhiss19/DS-C-Library" class="text-muted">View Project <i class="glyphicon glyphicon-chevron-right"></i>  </a></small> <b style="margin-left: 20px;">Course: Data Structure </b></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>       
+                    </div>                    
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                          <div class="row no-gutters">
+                              <div class="col-md-4">
+                                  <img src="https://play-lh.googleusercontent.com/zWG2W36XfJmN4A7WeWnisXItr4r8FJRVsZjpP7HgnhLrl1hEiD5-L5WQ6g3ecnZuFk0P" class="card-img" alt="..." width="135px" height="135px">
+                                </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <h5 class="card-title"><strong> Multiprogramming Operating System</strong> </h5>
+                                <p class="card-text">A multiprogramming OS simulation developed in Java that implies CPU scheduling algorithms, manage system resources like memory and CPU time through segmentation, paging.</p>
+                                <p class="card-text"><small class="text-muted"><a href="https://github.com/riddhiss19/multiprogramming-OS" class="text-muted">View Project <i class="glyphicon glyphicon-chevron-right"></i>  </a></small> <b style="margin-left: 20px;">Course: Operating System </b></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>       
+                    </div>
+                  </div>
+                </div>
+
+                <div id="sem4" class="tab-pane fade in ">
+                  <h3 class="text-center" style="color: white;">
+                    <i class="glyphicon glyphicon-chevron-left"></i>
+                    Semester 4 Course Projects
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                  </h3>
+                  
+                  <div class="row" style="margin-top: 30px;">
+                    <div class="col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="https://play-lh.googleusercontent.com/zWG2W36XfJmN4A7WeWnisXItr4r8FJRVsZjpP7HgnhLrl1hEiD5-L5WQ6g3ecnZuFk0P" class="card-img" alt="..." width="135px" height="135px">
+                                  </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title"><strong> Customer Churn Analysis</strong> </h5>
+                                  <p class="card-text">A customer churn prediction model developed in R that analyzes customer data to identify factors contributing to churn and builds a classification model using multiple techniques.</p>
+                                  <p class="card-text"><small class="text-muted"><a href="https://github.com/riddhiss19/customer-churn-analysis" class="text-muted">View Project <i class="glyphicon glyphicon-chevron-right"></i>  </a></small> <b style="margin-left: 20px;">Course: Data Science </b></p>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>       
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                          <div class="row no-gutters">
+                              <div class="col-md-4">
+                                  <img src="https://play-lh.googleusercontent.com/zWG2W36XfJmN4A7WeWnisXItr4r8FJRVsZjpP7HgnhLrl1hEiD5-L5WQ6g3ecnZuFk0P" class="card-img" alt="..." width="135px" height="135px">
+                                </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <h5 class="card-title"><strong> Range Finder & Area Calculator</strong> </h5>
+                                <p class="card-text">An IoT system using ToF sensors and microcontrollers to accurately measure distances and calculate the area of enclosed spaces  providing real-time range and dimension.</p>
+                                <p class="card-text"><small class="text-muted"><a href="#" class="text-muted">IoT hardware system <i class="glyphicon glyphicon-chevron-right"></i>  </a></small> <b style="margin-left: 20px;">Course: Internet of Things </b></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>       
+                    </div>                    
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                          <div class="row no-gutters">
+                              <div class="col-md-4">
+                                  <img src="https://play-lh.googleusercontent.com/zWG2W36XfJmN4A7WeWnisXItr4r8FJRVsZjpP7HgnhLrl1hEiD5-L5WQ6g3ecnZuFk0P" class="card-img" alt="..." width="135px" height="135px">
+                                </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <h5 class="card-title"><strong> V-ClubConnect</strong> </h5>
+                                <p class="card-text"> It is a PHP and MySQL based web application that provides college clubs with event management, membership tracking, administrative tools, to streamline college club operations.</p>
+                                <p class="card-text"><small class="text-muted"><a href="https://github.com/riddhiss19/" class="text-muted">View Project <i class="glyphicon glyphicon-chevron-right"></i>  </a></small> <b style="margin-left: 20px;">Course: Database Mngt. System </b></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>       
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                          <div class="row no-gutters">
+                              <div class="col-md-4">
+                                  <img src="https://play-lh.googleusercontent.com/zWG2W36XfJmN4A7WeWnisXItr4r8FJRVsZjpP7HgnhLrl1hEiD5-L5WQ6g3ecnZuFk0P" class="card-img" alt="..." width="135px" height="135px">
+                                </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <h5 class="card-title"><strong>Class Data Visualiser</strong> </h5>
+                                <p class="card-text">A Java-based classroom management system that enables teachers to intuitively manage student data, analyze performance through multiple reports, and communicate with students via mail sharing.</p>
+                                <p class="card-text"><small class="text-muted"><a href="https://github.com/riddhiss19/" class="text-muted">View Project <i class="glyphicon glyphicon-chevron-right"></i>  </a></small> <b style="margin-left: 20px;">Course: Object Oriented Prog. </b></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>       
+                    </div>
+                  </div>
+                </div>
+
+                <div id="sem5" class="tab-pane fade in ">
+                  <h3 class="text-center" style="color: white;">
+                    <i class="glyphicon glyphicon-chevron-left"></i>
+                    Semester 5 Course Projects
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                  </h3>
+                  <div class="row" style="margin-top: 30px;">
+                    <div class="col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="https://play-lh.googleusercontent.com/zWG2W36XfJmN4A7WeWnisXItr4r8FJRVsZjpP7HgnhLrl1hEiD5-L5WQ6g3ecnZuFk0P" class="card-img" alt="..." width="135px" height="135px">
+                                  </div>
+                              <div class="col-md-8">
+                                <div class="card-body"> 
+                                  <h5 class="card-title"><strong> Face Recognition based password Storage</strong> </h5>
+                                  <p class="card-text">Project uses facial biometrics for user authentication and securely stores login credentials encrypted using the recognized face as the key and sha256 encryption algorithm.</p>
+                                  <p class="card-text"><small class="text-muted"><a href="https://github.com/riddhiss19?tab=repositories" class="text-muted">View Project <i class="glyphicon glyphicon-chevron-right"></i>  </a></small> <b style="margin-left: 20px;">Course: Cyber Security </b></p>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>       
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                          <div class="row no-gutters">
+                              <div class="col-md-4">
+                                  <img src="https://play-lh.googleusercontent.com/zWG2W36XfJmN4A7WeWnisXItr4r8FJRVsZjpP7HgnhLrl1hEiD5-L5WQ6g3ecnZuFk0P" class="card-img" alt="..." width="135px" height="135px">
+                                </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <h5 class="card-title"><strong>Multiprotocol Network Sniffer</strong> </h5>
+                                <p class="card-text">A network sniffer capable of intercepting and analyzing traffic across multiple network protocols such as TCP, UDP, ICMP to troubleshoot connectivity issues and monitor network usage.</p>
+                                <p class="card-text"><small class="text-muted"><a href="https://github.com/riddhiss19?tab=repositories" class="text-muted">View Project<i class="glyphicon glyphicon-chevron-right"></i>  </a></small> <b style="margin-left: 20px;">Course: Computer Network </b></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>       
+                    </div>                    
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                          <div class="row no-gutters">
+                              <div class="col-md-4">
+                                  <img src="https://play-lh.googleusercontent.com/zWG2W36XfJmN4A7WeWnisXItr4r8FJRVsZjpP7HgnhLrl1hEiD5-L5WQ6g3ecnZuFk0P" class="card-img" alt="..." width="135px" height="135px">
+                                </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <h5 class="card-title"><strong>AI Resume Analyser</strong> </h5>
+                                <p class="card-text"> An AI-powered resume analyzer that scores candidate resumes based on skills, experience, and keywords and recommends suitable job openings by matching resume content with job descriptions.</p>
+                                <p class="card-text"><small class="text-muted"><a href="https://github.com/riddhiss19/AI-res" class="text-muted">View Project <i class="glyphicon glyphicon-chevron-right"></i>  </a></small> <b style="margin-left: 20px;">Course: Artificial Intelligence </b></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>       
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card mb-3" style="max-width: 540px; padding: 12px;box-shadow: 2px 4px 4px 2px #1f1f1f;background-color: #ffffff">
+                          <div class="row no-gutters">
+                              <div class="col-md-4">
+                                  <img src="https://play-lh.googleusercontent.com/zWG2W36XfJmN4A7WeWnisXItr4r8FJRVsZjpP7HgnhLrl1hEiD5-L5WQ6g3ecnZuFk0P" class="card-img" alt="..." width="135px" height="135px">
+                                </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <h5 class="card-title"><strong>Pascal Interpreter</strong> </h5>
+                                <p class="card-text">A Pascal interpreter that parses Pascal source code, performs lexical, syntactic, and semantic analysis, and interprets the code by executing instructions dynamically rather than compiling to machine code.</p>
+                                <p class="card-text"><small class="text-muted"><a href="https://github.com/riddhiss19/?tab=repositories" class="text-muted">View Project <i class="glyphicon glyphicon-chevron-right"></i>  </a></small> <b style="margin-left: 20px;">Course: Compiler Design </b></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>       
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+     </div>
+
+</body>
+</html>

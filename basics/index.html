@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Copy</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        ul li{
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container p-2">
+        <div class="row">
+            <div class="col-md-4  border rounded p-3">
+                <h2 class="text-center">List 1</h2>
+                <input type="text" id="addListItem" placeholder="Enter Item" class="form-control">
+                <br>
+               <div class="text-center"> <button id="addItemButton" class="btn btn-info">Add to List1</button></div>
+               <br>
+                <ul class="list-group" id="l1"></ul>
+            </div>
+            <div class="col-md-4" style="display: flex; align-items: center; justify-content: space-between;">
+                <button id="copyRight" class="btn btn-info">Copy Right></button>
+                <button id="copyLeft" class="btn btn-info">Copy Left &lt; </button>
+            </div>
+            
+            <div class="col-md-4 border rounded">
+                <h2 class="text-center">List 2</h2>
+                <input type="text" id="addListItem2" placeholder="Enter Item" class="form-control">
+                <br>
+                <div class="text-center"> <button id="addItemButton2" class="btn btn-info">Add to List2</button></div>
+                <br>
+                <ul id="l2"></ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        $("#addItemButton").on('click', function () {
+            var newItem = $("#addListItem").val();
+            if (newItem) {
+                $('<li class="list-group-item">').text(newItem).appendTo("#l1");
+                $("#addListItem").val('');
+            }
+        })
+
+        $("#addItemButton2").on('click', function () {
+            var newItem = $("#addListItem2").val();
+            if (newItem) {
+                $('<li class="list-group-item">').text(newItem).appendTo("#l2");
+                $("#addListItem2").val('');
+            }
+        })
+
+        $("#copyRight").on('click', function () {
+            $("#l2").empty();
+            $("#l1 li").clone().appendTo("#l2");
+        });
+
+        $("#copyLeft").on('click', function(){
+            $("#l1").empty();
+            $("#l2 li").clone().appendTo("#l1");
+        })
+    </script>
+
+</body>
+
+</html>
